@@ -55,6 +55,30 @@
   outline: none;
 }
 
+.container .row .form-btn {
+  display: flex;
+  width: 100%;
+}
+
+.container .row .button-cancelar {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  border: solid 2px orangered;
+  border-radius: 45px;
+  background: rgba(255, 68, 0, 0.568);
+  color: black;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: linear 400ms;
+  right: 10px;
+}
+
+.container .row .button-cancelar:hover {
+  background: rgba(255, 68, 0, 0.479);
+  color: white;
+}
+
 .container .row .button {
   width: 100%;
   padding: 10px;

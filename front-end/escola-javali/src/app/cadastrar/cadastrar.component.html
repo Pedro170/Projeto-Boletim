@@ -24,11 +24,6 @@
             <label for=""></label>
             <input type="text" name="" id="" placeholder="nome">
           </div>
-    
-          <div class="form">
-            <label for=""></label>
-            <input type="text" name="" id="" placeholder="usuário">
-          </div>
 
           <div class="form">
             <label for=""></label>
@@ -41,9 +36,19 @@
           </div>
 
           <div class="form">
-            <button class="button" (click)="logar()">Login</button>
+            <label for=""></label>
+            <input type="text" name="" id="" placeholder="senha">
+          </div>
+
+          <div class="form">
+            <label for=""></label>
+            <input type="text" name="" id="" placeholder="confirmar senha">
           </div>
         </form>
+        <div class="form-btn">
+          <button class="button-cancelar" routerLink='/login'>Cancelar</button>
+          <button class="button" (click)="logar()">Cadastrar</button>
+        </div>
       </div>
     </div>
   </div>
