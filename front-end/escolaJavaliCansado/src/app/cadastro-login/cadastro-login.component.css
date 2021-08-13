@@ -1,0 +1,362 @@
+/* Style ngClass login */
+
+.left50 {
+  left: 50px;
+}
+
+.left450 {
+  margin-left: 450px;
+}
+
+.left0 {
+  margin-left: 0;
+}
+
+
+/* Style ngClass cadastro */
+
+.leftMenos400 {
+  margin-left: -400px;
+}
+
+.marginLeft50 {
+  margin-left: -400px;
+}
+
+.left110 {
+  margin-left: 110px;
+}
+
+
+.img-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-login img {
+  width: 200px;
+  border-radius: 50%;
+}
+
+.hero {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(http://lp.startse.com.br/wp-content/uploads/2018/06/img-background-a-nova-economia.jpg);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
+
+.form-box {
+  width: 24rem;
+  height: 580px;
+  position: relative;
+  margin: 1.7% auto;
+  background: #7d98a754;
+  padding: .32rem;
+  border-radius: 5px;
+  overflow: hidden;
+  /*border-image: linear-gradient(135deg, #0A0C21 0%, #F92A87 100%) 2;*/
+}
+
+.button-box {
+  width: 220px;
+  margin: 35px auto;
+  position: relative;
+  box-shadow: 0 0 20px 9px #0a0c2148;
+  border-radius: 30px;
+}
+
+.toggle-btn {
+  padding: 10px 30px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  position: relative;
+  color: #0A0C21;
+  font-weight: 400;
+}
+
+#btn {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 110px;
+  height: 100%;
+  background: linear-gradient(to right, #0A0C21, #F92A87);
+  border-radius: 30px;
+  transition: .5s;
+}
+
+.social-icons {
+  margin: 30px auto;
+  text-align: center;
+}
+
+.social-icons i {
+  font-size: 40px;
+  background: linear-gradient(to right,#0A0C21 25%, #F92A87);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 12px;
+  cursor: pointer;
+  transition: linear 400ms;
+}
+
+.social-icons i:hover {
+  color: #F92A87;
+  background: linear-gradient(to right, #F92A87, #0A0C21);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.input-group {
+  top: 180px;
+  position: absolute;
+  width: 17.5rem;
+  transition: .5s;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: solid 1px #0A0C21;
+  outline: none;
+  background: transparent;
+}
+
+.input-group input:valid ~ .icons {
+  display: block;
+  top: -32px;
+}
+
+.input-group .icons {
+  font-size: 1rem;
+  color: #0A0C21;
+  position: relative;
+  left: 260px;
+  cursor: pointer;
+  display: none;
+}
+
+#hide {
+  display: none;
+}
+
+/* Style button of login  */
+
+.btn-login {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 12px 53px 12px 23px;
+  background: linear-gradient(to right, #0A0C21, #F92A87);
+  text-decoration: none;
+  outline: none;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all .3s;
+  color: #0A0C21;
+}
+
+.btn-login span {
+  position: relative;
+  z-index: 3;
+}
+
+.btn-login .text {
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.btn-login .round {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  background: #0A0C21;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  transition: .3s ease-out;
+  z-index: 1;
+}
+
+.btn-login .round i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #F92A87;
+}
+
+.btn-login:hover {
+  padding-left: 48px;
+  padding-right: 28px;
+  color: #F92A87;
+}
+
+.btn-login:hover .round {
+  width: calc(100% - 6px);
+  border-radius: 30px;
+}
+
+.btn-login:hover .round i {
+  left: 12%;
+}
+
+/* fim do style do button de login */
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all .3s;
+}
+
+/* Style do button cadastrar */
+
+.btn-login.cadastrar {
+  padding: 9px 30px;
+  margin-top: 10px;
+  background: #F92A87;
+}
+
+.btn-login.cadastrar .round {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  background: #0A0C21;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  transition: .3s ease-out;
+  z-index: 1;
+}
+
+.btn-login.cadastrar .text {
+  line-height: 1.45;
+  font-weight: normal;
+  text-transform: none;
+  z-index: 2;
+  margin-left: -15px;
+}
+
+.btn-login.cadastrar .round i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn-login.cadastrar:hover {
+  padding-left: 48px;
+  padding-right: 28px;
+  color: #F92A87;
+}
+
+.btn-login.cadastrar:hover .round {
+  width: calc(100% - 2px);
+  border-radius: 30px;
+}
+
+.btn-login.cadastrar:hover .round i {
+  left: 12%;
+}
+
+/* /Fim tyle do button cadastrar */
+
+.submit-btn {
+  width: 100%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  background: linear-gradient(to right, #0A0C21, #F92A87);
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  color: #0A0C21;
+  font-weight: 500;
+}
+
+.buttons .submit-btn.cancelar {
+  margin-right: 20px;
+}
+
+#login {
+  left: 50px;
+}
+
+#cadastro {
+  left: 450px;
+}
+
+/* Estilização do select */
+
+.select-container {
+  width: 100%;
+}
+
+select{
+  background: transparent;
+  color:#0A0C21;
+  outline: none;
+  width: 280px;
+  border: none;
+  border-bottom: solid 1px #0A0C21;
+  padding: 10px 0;
+}
+
+option::-ms-expand {
+  position: relative;
+}
+
+select option {
+  margin: 40px;
+  background: rgba(125, 152, 167, .1);
+  color: #0A0C21;
+}
+
+/* Placeholder dos inputs */
+::placeholder {
+  color: #0A0C21;
+  font-weight: 400;
+  font-size: 1.1em;
+}
+
+/* Responsividade do site */
+
+@media screen and (max-width: 600px) {
+  .form-box {
+    width: 22rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .form-box {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .input-group {
+    top: 180px;
+    width: 14rem;
+    transition: .5s;
+  }
+
+  .selected {
+    width: 80%;
+  }
+}
