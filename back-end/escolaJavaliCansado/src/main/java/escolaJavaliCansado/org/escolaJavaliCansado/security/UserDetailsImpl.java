@@ -1,36 +1,32 @@
-package org.escolasBrasil.escolaJavaliCansado.security;
+package escolaJavaliCansado.org.escolaJavaliCansado.security;
 
 import java.util.Collection;
-
-import org.escolasBrasil.escolaJavaliCansado.model.Usuarios;
+import java.util.List;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import escolaJavaliCansado.org.escolaJavaliCansado.model.Usuarios;
 
-import javassist.SerialVersionUID;
 
 public class UserDetailsImpl implements UserDetails {
 	
-	private static final long SerialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 	
 	private String userName;
 	private String password;
+	private List<GrantedAuthority> authorities;
+
+	public UserDetailsImpl(Usuarios usuarios) {
+		this.userName = usuarios.getEmail();
+		this.password = usuarios.getSenha();
+	}
 	
-	
-	// constructor
 	public UserDetailsImpl() {
-		super();
+		
 	}
-
-	public UserDetailsImpl(Usuarios user) {
-		this.userName = user.getEmail();
-		this.password = user.getSenha();
-	}
-
-
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		return null;
+		return authorities;
 	}
 
 	@Override
@@ -62,5 +58,4 @@ public class UserDetailsImpl implements UserDetails {
 	public boolean isEnabled() {
 		return true;
 	}
-
 }

@@ -1,24 +1,26 @@
-package org.escolasBrasil.escolaJavaliCansado.security;
+package escolaJavaliCansado.org.escolaJavaliCansado.security;
 
 import java.util.Optional;
 
-import org.escolasBrasil.escolaJavaliCansado.model.Usuarios;
-import org.escolasBrasil.escolaJavaliCansado.repository.UsuariosRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import escolaJavaliCansado.org.escolaJavaliCansado.model.Usuarios;
+import escolaJavaliCansado.org.escolaJavaliCansado.repository.UsuariosRespository;
+
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 	@Autowired
-	private UsuariosRepository repositoryUser;
+	private UsuariosRespository usuariosRepository;
 	
 	@Override
 	public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
-		Optional<Usuarios> user = repositoryUser.findByEmail(userName);
-		user.orElseThrow(() -> new UsernameNotFoundException(userName + " not found."));
-		return user.map(UserDetailsImpl::new).get();
+		
+		Optional<Usuarios> usuarios = usuariosRepository.findByEmail(userName);
+		usuarios.orElseThrow(() -> new UsernameNotFoundException(userName + " not found."));
+		return usuarios.map(UserDetailsImpl::new).get();
 	}
 }

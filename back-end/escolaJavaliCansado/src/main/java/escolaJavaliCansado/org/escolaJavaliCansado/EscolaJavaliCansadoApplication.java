@@ -1,4 +1,4 @@
-package org.escolasBrasil.escolaJavaliCansado;
+package escolaJavaliCansado.org.escolaJavaliCansado;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
