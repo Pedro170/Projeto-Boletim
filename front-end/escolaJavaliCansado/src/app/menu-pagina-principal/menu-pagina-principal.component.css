@@ -11,9 +11,9 @@
 
 .navigation {
   position: fixed;
-  top: 20px;
-  left: 20px;
-  bottom: 20px;
+  top: 1.25rem;
+  left: 1.25rem;
+  bottom: 1.25rem;
   width: 18.8rem;
   border-radius: 10px;
   box-sizing: inherit;
@@ -213,4 +213,87 @@
   background: #7D98A7;
   width: 100%;
   height: 100%;
+}
+
+/* RESPONSIVIDADE DO SITE */
+
+@media only screen and (max-width: 1025px) {
+  .navigation {
+    position: fixed;
+    top: 1.10rem;
+    left: 1.10rem;
+    bottom: 1.10rem;
+    width: 17rem;
+    border-radius: 10px;
+    box-sizing: inherit;
+    border-left: solid 5px #444;
+    background: #0A0C21;
+    transition: width .5s;
+  }
+
+  .bloco {
+    width: 70%;
+    height: 100vh;
+    margin-left: 30%;
+    transition: 500ms;
+  }
+
+  .content.active .bloco {
+    margin-left: 10%;
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navigation {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    bottom: 1rem;
+    width: 17.5rem;
+    border-radius: 10px;
+    box-sizing: inherit;
+    border-left: solid 5px #444;
+    background: #0A0C21;
+    transition: width .5s;
+  }
+
+  .bloco {
+    width: 60%;
+    height: 100vh;
+    margin-left: 40%;
+    transition: 500ms;
+  }
+
+  .content.active .bloco {
+    margin-left: 12%;
+    width: 88%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navigation {
+    position: fixed;
+    top: .5rem;
+    left: .5rem;
+    bottom: .5rem;
+    width: 17rem;
+    border-radius: 10px;
+    box-sizing: inherit;
+    border-left: solid 5px #444;
+    background: #0A0C21;
+    transition: width .5s;
+  }
+
+  .bloco {
+    width: 60%;
+    height: 100vh;
+    margin-left: 40%;
+    transition: 500ms;
+  }
+
+  .content.active .bloco {
+    margin-left: 18%;
+    width: 82%;
+  }
 }
