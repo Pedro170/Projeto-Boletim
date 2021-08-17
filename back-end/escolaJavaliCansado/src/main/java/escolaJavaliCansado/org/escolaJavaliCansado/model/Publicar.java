@@ -20,7 +20,7 @@ public class Publicar {
 	// Attribute
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) private Long idPublicar;
 	@NotNull @Size(min = 3, message="O número mínimo de caracteres são três!") private String nomeAluno;
-	@NotNull private Float bimestre1, bimestre2, bimestre3, bimestre4, media;
+	private Float bimestre1, bimestre2, bimestre3, bimestre4, media;
 	@Size(min = 5, message = "[ERRO] O mínimo de caracteres são de 15!") private String situacao;
 	
 	// Relações entre as tabelas publicar e usuários
