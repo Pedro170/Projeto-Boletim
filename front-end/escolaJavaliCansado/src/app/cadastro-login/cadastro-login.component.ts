@@ -89,4 +89,14 @@ export class CadastroLoginComponent implements OnInit {
       });
     }
   }
+
+  /*Sript do select *
+  selected(): any {
+    const selected = document.querySelector('.selected');
+    const optionsContainer = document.querySelector('.options-container');
+    const optinsList = document.querySelectorAll('.option');
+
+    optionsContainer?.classList.toggle('active');
+  }
+  */
 }

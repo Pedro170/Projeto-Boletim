@@ -1,8 +1,8 @@
 <div class="body">
   <div class="navigation">
-    <div class="content-perfil">
+    <div class="content-logo">
         <div class="logo-name">
-          <img src="https://i.imgur.com/RIq2CCi.gif" alt="">
+          <img src="https://i.imgur.com/RIq2CCi.gif" alt="logo da escola">
           <div class="name-escola">Escola Javali Cansado</div>
         </div>
         <span id="hamburger" (click)="menu($event)"></span>
@@ -10,53 +10,60 @@
 
     <ul>
       <li class="list">
-        <a href="#">
+        <a href="#home">
           <span class="icon"><i class='bx bxs-home'></i></span>
           <span class="title">Home</span>
         </a>
       </li>
 
       <li class="list">
-        <a href="#">
+        <a href="#perfil">
           <span class="icon"><i class="fas fa-user-edit"></i></span>
           <span class="title">Perfil</span>
         </a>
       </li>
 
       <li class="list">
-        <a href="#">
+        <a href="#boletim">
           <span class="icon"><i class='bx bxs-message-rounded'></i></span>
           <span class="title">Boletim</span>
         </a>
       </li>
 
       <li class="list">
-        <a href="#">
+        <a href="#config">
           <span class="icon"><i class='bx bxs-cog'></i></span>
           <span class="title">Configurações</span>
         </a>
       </li>
 
       <li class="list">
-        <a href="#">
+        <a href="#ajuda">
           <span class="icon"><i class="fas fa-question"></i></span>
           <span class="title">Ajuda</span>
         </a>
       </li>
 
       <li class="list">
-        <a href="#">
+        <a href="#video-aula">
           <span class="icon"><i class='bx bxs-video'></i></span>
           <span class="title">Vídeo Aula</span>
         </a>
       </li>
 
       <li class="list">
-        <a href="#">
+        <a href="#" (click)="sair()" class="sair">
           <span class="icon"><i class='bx bxs-log-out'></i></span>
           <span class="title">Sair</span>
         </a>
       </li>
+
+      <div class="content-perfil">
+        <div class="foto-name">
+          <img src="{{ foto }}" alt="foto do usuário">
+          <span class="name-user">{{ nome }}</span>
+        </div>
+      </div>
     </ul>
   </div>
 </div>
@@ -65,15 +72,339 @@
 <!-- PÁGINA PRINCIPAL -->
 
 <div class="content">
-  <div class="bloco">
-    <section class="one" id="one">
-      <h1 style="color: #fff;">Obrigado Deus</h1>
+  <!-- HOME DA PÁGINA -->
+
+  <div class="bloco" id="home">
+    <section class="home">
+      <header class="cabecalho">
+        <img src="https://i.imgur.com/RIq2CCi.gif" alt="logo da escola">
+        <h2 class="text-header">Página inícial</h2>
+      </header>
     </section>
   </div>
 
-  <div class="bloco">
-    <section class="two" id="two">
+  <div class="bloco" id="perfil">
+    <section class="perfil">
+      <header class="cabecalho">
+        <img src="https://i.imgur.com/RIq2CCi.gif" alt="logo da escola">
+        <h2 class="text-header">Perfil</h2>
+      </header>
+    </section>
+  </div>
 
+  <div class="bloco" id="boletim">
+    <section class="boletim">
+      <header class="cabecalho">
+        <img src="https://i.imgur.com/RIq2CCi.gif" alt="logo da escola">
+        <h2 class="text-header">Boletim</h2>
+      </header>
+
+      <div class="header-table tb">
+        <h3>Boletim do ano letivo de 2021</h3>
+      </div>
+
+      <div class="container-table">
+        <table class="tabela">
+          <thead>
+            <tr>
+              <th>Nome do Aluno</th>
+              <th>Nota 1</th>
+              <th>Nota 2</th>
+              <th>Nota 3</th>
+              <th>Nota 4</th>
+              <th>Média</th>
+              <th>Situação</th>
+              <th><i class='bx bxs-edit-location'></i></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>João Pedro dos Santos Silva</td>
+              <td>7.5</td>
+              <td>8.95</td>
+              <td>10</td>
+              <td>9</td>
+              <td>9.5</td>
+              <td>Aprovado</td>
+              <td><i class='bx bxs-edit-alt'></i></td>
+            </tr>
+
+            <tr>
+              <td>João Pedro dos Santos Silva</td>
+              <td>7.5</td>
+              <td>8.95</td>
+              <td>10</td>
+              <td>9</td>
+              <td>9.5</td>
+              <td>Aprovado</td>
+              <td><i class='bx bxs-edit-alt'></i></td>
+            </tr>
+
+            <tr>
+              <td>João Pedro dos Santos Silva</td>
+              <td>7.5</td>
+              <td>8.95</td>
+              <td>10</td>
+              <td>9</td>
+              <td>9.5</td>
+              <td>Aprovado</td>
+              <td><i class='bx bxs-edit-alt'></i></td>
+            </tr>
+
+            <tr>
+              <td>João Pedro dos Santos Silva</td>
+              <td>7.5</td>
+              <td>8.95</td>
+              <td>10</td>
+              <td>9</td>
+              <td>9.5</td>
+              <td>Aprovado</td>
+              <td><i class='bx bxs-edit-alt'></i></td>
+            </tr>
+
+            <tr>
+              <td>João Pedro dos Santos Silva</td>
+              <td>7.5</td>
+              <td>8.95</td>
+              <td>10</td>
+              <td>9</td>
+              <td>9.5</td>
+              <td>Aprovado</td>
+              <td><i class='bx bxs-edit-alt'></i></td>
+            </tr>
+
+            <tr>
+              <td>João Pedro dos Santos Silva</td>
+              <td>7.5</td>
+              <td>8.95</td>
+              <td>10</td>
+              <td>9</td>
+              <td>9.5</td>
+              <td>Aprovado</td>
+              <td><i class='bx bxs-edit-alt'></i></td>
+            </tr>
+
+            <tr>
+              <td>João Pedro dos Santos Silva</td>
+              <td>7.5</td>
+              <td>8.95</td>
+              <td>10</td>
+              <td>9</td>
+              <td>9.5</td>
+              <td>Aprovado</td>
+              <td><i class='bx bxs-edit-alt'></i></td>
+            </tr>
+
+            <tr>
+              <td>João Pedro dos Santos Silva</td>
+              <td>7.5</td>
+              <td>8.95</td>
+              <td>10</td>
+              <td>9</td>
+              <td>9.5</td>
+              <td>Aprovado</td>
+              <td><i class='bx bxs-edit-alt'></i></td>
+            </tr>
+
+            <tr>
+              <td>João Pedro dos Santos Silva</td>
+              <td>7.5</td>
+              <td>8.95</td>
+              <td>10</td>
+              <td>9</td>
+              <td>9.5</td>
+              <td>Aprovado</td>
+              <td><i class='bx bxs-edit-alt'></i></td>
+            </tr>
+            <tr>
+              <td>João Pedro dos Santos Silva</td>
+              <td>7.5</td>
+              <td>8.95</td>
+              <td>10</td>
+              <td>9</td>
+              <td>9.5</td>
+              <td>Aprovado</td>
+              <td><i class='bx bxs-edit-alt'></i></td>
+            </tr>
+            <tr>
+              <td>João Pedro dos Santos Silva</td>
+              <td>7.5</td>
+              <td>8.95</td>
+              <td>10</td>
+              <td>9</td>
+              <td>9.5</td>
+              <td>Aprovado</td>
+              <td><i class='bx bxs-edit-alt'></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="header-table">
+        <button class="button" (click)="modalBoletim()">Publicar Boletim</button>
+      </div>
+    </section>
+  </div>
+
+  <div class="bloco" id="config">
+    <section class="config">
+      <header class="cabecalho">
+        <img src="https://i.imgur.com/RIq2CCi.gif" alt="logo da escola">
+        <h2 class="text-header">Configurações</h2>
+      </header>
+    </section>
+  </div>
+
+  <div class="bloco" id="ajuda">
+    <section class="ajuda">
+      <header class="cabecalho">
+        <img src="https://i.imgur.com/RIq2CCi.gif" alt="logo da escola">
+        <h2 class="text-header">Ajuda</h2>
+      </header>
+    </section>
+  </div>
+
+  <div class="bloco" id="video-aula">
+    <section class="video-aula">
+      <header class="cabecalho">
+        <img src="https://i.imgur.com/RIq2CCi.gif" alt="logo da escola">
+        <h2 class="text-header">Vídeo Aula</h2>
+      </header>
+
+      <section class="container-video">
+        <div class="video">
+            <div class="video-princ">
+                <iframe width="100%" height="410" src="https://www.youtube.com/embed/FDHO8gNEXw4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="reproduz"></iframe>
+              <span>Nome da aula <button (click)="modalInfo()"><i class="fas fa-info-circle"></i></button></span>
+            </div>
+            <div class="container-infor-video">
+              <div class="logo-info">
+                <img src="https://i.imgur.com/RIq2CCi.gif" alt="logo da escola">
+                <span>nome da matéria</span>
+              </div>
+
+              <button class="button" (click)="modalVideo()">Publicar vídeo</button>
+            </div>
+        </div>
+
+        <div class="sidebar">
+          <div>
+            <iframe width="98%" height="120" src="https://www.youtube.com/embed/4EvNxWhskf8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p><img src="{{ foto }}" alt=""> Matemática | {{ nome }}</p>
+          </div>
+
+          <div>
+            <iframe width="98%" height="120" src="https://www.youtube.com/embed/4EvNxWhskf8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p><img src="{{ foto }}" alt=""> Matemática | {{ nome }}</p>
+          </div>
+
+          <div>
+            <iframe width="98%" height="120" src="https://www.youtube.com/embed/4EvNxWhskf8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p><img src="{{ foto }}" alt=""> Matemática | {{ nome }}</p>
+          </div>
+
+          <div>
+            <iframe width="98%" height="120" src="https://www.youtube.com/embed/4EvNxWhskf8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p><img src="{{ foto }}" alt=""> Matemática | {{ nome }}</p>
+          </div>
+
+          <div>
+            <iframe width="98%" height="120" src="https://www.youtube.com/embed/4EvNxWhskf8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p><img src="{{ foto }}" alt=""> Matemática | {{ nome }}</p>
+          </div>
+
+          <div>
+            <iframe width="98%" height="120" src="https://www.youtube.com/embed/4EvNxWhskf8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p><img src="{{ foto }}" alt=""> Matemática | {{ nome }}</p>
+          </div>
+
+          <div>
+            <iframe width="98%" height="120" src="https://www.youtube.com/embed/4EvNxWhskf8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p><img src="{{ foto }}" alt=""> Matemática | {{ nome }}</p>
+          </div>
+
+          <div>
+            <iframe width="98%" height="120" src="https://www.youtube.com/embed/4EvNxWhskf8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p><img src="{{ foto }}" alt=""> Matemática | {{ nome }}</p>
+          </div>
+
+          <div>
+            <iframe width="98%" height="120" src="https://www.youtube.com/embed/4EvNxWhskf8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p><img src="{{ foto }}" alt=""> Matemática | {{ nome }}</p>
+          </div>
+        </div>
+      </section>
     </section>
   </div>
 </div>
+
+<!-- MODAL BOLETIM -->
+
+<div id="modal-boletim" class="modal-container">
+  <div class="boletim-modal">
+    <button class="fechar">x</button>
+    <h3>Preencha o Boletim</h3>
+
+    <form>
+      <input [(ngModel)]="publish.nomeAluno" type="text" name="" id="" class="input" placeholder="Nome do Aluno">
+      <input [(ngModel)]="publish.bimestre1" type="number" name="" id="" class="input" placeholder="nota 1">
+      <input [(ngModel)]="publish.bimestre2"  type="number" name="" id="" class="input" placeholder="nota 2">
+      <input [(ngModel)]="publish.bimestre3"  type="number" name="" id="" class="input" placeholder="nota 3">
+      <input [(ngModel)]="publish.bimestre4"  type="number" name="" id="" class="input" placeholder="nota 4">
+      <input [(ngModel)]="publish.media" type="number" name="" id="" class="input" placeholder="média">
+      <input [(ngModel)]="publish.situacao"  type="text" name="" id="" class="input" placeholder="situação">
+
+      <button class="button" (click)="cadastrar()">publicar</button>
+    </form>
+  </div>
+</div>
+
+<!-- MODAL VÍDEO AULA -->
+
+<div id="modal-video" class="modal-container">
+  <div class="video-modal">
+    <button class="fechar" id="close">x</button>
+    <h3>Publique a Vídeo Aula</h3>
+    <form>
+      <input type="text" class="input" placeholder="Título">
+      <input type="text" class="input" placeholder="Imagem do Vídeo">
+      <input type="text" class="input" placeholder="matéria">
+      <textarea name="" id="" cols="30" rows="10" class="input" placeholder="Descrição do Vídeo"></textarea>
+      <div class="button">
+          <button type="submit" class="btn">Cancelar</button>
+          <button type="submit" class="btn publicar">
+              <span class="text">Publicar</span>
+              <span class="round"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+          </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- MODAL INFO VÍDEO 
+
+<div id="modal-info" class="modal-container">
+  <div class="info-modal">
+    <button class="fechar" id="sumir">x</button>
+    <h3>informações do Vídeo </h3>
+    <h4>Título do vídeo</h4>
+    <p>Funções do segundo grau</p>
+    <h4>Descrição do Vídeo</h4>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non beatae in unde laboriosam pariatur, omnis, odit, vero praesentium repudiandae ipsam similique voluptates. Magnam officiis iure voluptatibus. Nostrum laborum omnis ipsam.
+    </p>
+
+    <h4>Atividades para download</h4>
+    <a href="./midia/Chris Brown - All Back.mp4" download="./midia/Chris Brown - All Back.mp4"></a>
+
+    <h4>Matéria</h4>
+    <p>Biologia</p>
+
+    <h4>Data da Publicação: <span>Prof. nome professor</span></h4>
+    <div class="info-prof">
+        <span>emalprofessor@gmail.com</span> 
+        <p>data: 23/07/2021</p>
+    </div>
+  </div>
+</div>
+-->

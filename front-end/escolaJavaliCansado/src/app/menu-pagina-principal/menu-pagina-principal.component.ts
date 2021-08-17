@@ -2,6 +2,8 @@ import { element } from 'protractor';
 import { environment } from './../../environments/environment.prod';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Publish } from '../model/Publish';
+import { PublicarService } from '../service/publicar.service';
 
 @Component({
   selector: 'app-menu-pagina-principal',
@@ -10,29 +12,28 @@ import { Router } from '@angular/router';
 })
 export class MenuPaginaPrincipalComponent implements OnInit {
 
+  publish: Publish = new Publish();
+  listaPublish: Publish[];
+
   // scripts do menu
   nome = environment.nome;
   foto = environment.foto;
-  navigation: any;
-  corpo: any;
-  toogle: any;
-  content: any;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private publishService: PublicarService
   ) { }
 
   ngOnInit(): void {
-    /*
     if (environment.token === '') {
       alert('Sua seçao expirou, faça o login novamente.');
       this.router.navigate(['/login']);
     }
-    */
     window.scroll(0, 0);
   }
 
-  /* Sair das página
+  /* Sair das página */
+
   sair(): any {
     this.router.navigate(['/login']);
     environment.token = '';
@@ -40,14 +41,6 @@ export class MenuPaginaPrincipalComponent implements OnInit {
     environment.foto = '';
     environment.id = 0;
   }
-
-  toggle(): any {
-    this.menu.classList.toogle('active');
-    this.navigation.classList.toogle('active');
-    this.corpo.classList.toggle('active');
-    console.log(this.menu);
-  }
-  */
 
   menu(event: any): any {
     const menu = document.querySelector('#hamburger');
@@ -58,4 +51,56 @@ export class MenuPaginaPrincipalComponent implements OnInit {
     navigation?.classList.toggle('active');
     content?.classList.toggle('active');
   }
+
+  /* SCRIPTS DA PARTE BOLETIM */
+
+  cadastrar(): any {
+    this.publishService.postPublish(this.publish).subscribe((resp: Publish) => {
+      this.publish = resp;
+      alert('Notas do aluno postado com sucesso!');
+      this.publish = new Publish();
+    });
+  }
+
+  modalBoletim(): any {
+    const modal = document.querySelector('#modal-boletim');
+    const close = document.querySelector('.fechar');
+    modal?.classList.add('mostrar');
+    modal?.addEventListener('click', (e) => {
+      if (e.target === modal || e.target === close) {
+        modal.classList.remove('mostrar');
+      }
+    });
+  }
+
+  /* MODAL VÍDEO */
+
+  modalVideo(): any {
+    const modal = document.querySelector('#modal-video');
+    if (modal) {
+      const close = document.querySelector('#close');
+      modal?.classList.add('mostrar');
+      modal?.addEventListener('click', (e) => {
+        if (e.target === modal || e.target === close) {
+          modal.classList.remove('mostrar');
+        }
+      });
+    }
+  }
+
+  /* MODAL VÍDEO INFOR */
+
+  modalInfo(): any {
+    const modal = document.querySelector('#modal-info');
+    if (modal) {
+      const sumir = document.querySelector('#sumir');
+      modal?.classList.add('mostrar');
+      modal?.addEventListener('click', (e) => {
+        if (e.target === modal || e.target === sumir) {
+          modal.classList.remove('mostrar');
+        }
+      });
+    }
+  }
+
 }
