@@ -8,74 +8,56 @@
 		<version>2.5.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>org.escolasBrasil</groupId>
+	<groupId>escolaJavaliCansado.org</groupId>
 	<artifactId>escolaJavaliCansado</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>escolaJavaliCansado</name>
-	<description>Boletim dos alunos da Escola Javali Cansado</description>
+	<description>A melhor escola para o seu filho, pois é a mais reconhecida do estado</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
 	<dependencies>
-		<!-- *********** dependencia Security *************** -->
+	 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
-		<!-- ************************************************ -->
 		
-		<!-- *********** dependencia codec *************** -->
 		<dependency>
 			<groupId>commons-codec</groupId>
 			<artifactId>commons-codec</artifactId>
+			<version>1.10</version>
 		</dependency>
-		<!-- ************************************************ -->
-		
-		<!-- *********** dependencia JPA *************** -->
+	
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
-		<!-- ************************************************ -->
-		
-		<!-- *********** dependencia Validation *************** -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
-		<!-- ************************************************ -->
-		
-		<!-- *********** dependencia Security *************** -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<!-- ************************************************ -->
 
-		<!-- *********** dependencia Security *************** -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
-		<!-- ************************************************ -->
-		
-		<!-- *********** dependencia Security *************** -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-		<!-- ************************************************ -->
-		
-		<!-- *********** dependencia Security *************** -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- ************************************************ -->
 	</dependencies>
 
 	<build>

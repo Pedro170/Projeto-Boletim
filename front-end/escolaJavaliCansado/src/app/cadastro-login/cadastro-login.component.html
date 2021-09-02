@@ -1,0 +1,89 @@
+<div class="hero">
+  <div class="form-box">
+      <div class="button-box">
+          <div id="btn" [ngClass]="classBtn"></div>
+          <button type="button" class="toggle-btn" (click)='mudaLogin()'>Login</button>
+          <button type="button" class="toggle-btn" (click)='mudaCadastro()'>Cadastrar</button>
+      </div>
+
+      <div class="social-icons">
+          <i class='bx bxl-facebook-circle'></i>
+          <i class='bx bxl-github'></i>
+          <i class='bx bxl-google-plus-circle'></i>
+      </div>
+
+      <!-- Formulário de Login -->
+
+      <form action="" class="input-group" id="login" [ngClass]="[classLogin]">
+          <input [(ngModel)]="userLogin.email" type="email" onkeyup="validaEmail()" name="email" id="emailId" class="input-field" placeholder="e-mail" required>
+          <div id="txtEmail"></div>
+
+          <input [(ngModel)]="userLogin.senha" type="password" name="senha" id="senhaId" class="input-field" placeholder="senha" required>
+          <span class="icons" id="show"><i class="fas fa-eye"></i></span>
+          <span class="icons" id="hide"><i class="fas fa-eye-slash"></i></span>
+
+          <div class="img-login">
+              <img src="https://i.imgur.com/EFGErqv.png" alt="">
+          </div>
+
+          <button type="submit" class="btn-login">
+              <span class="text" (click)="login()">Login</span>
+              <span class="round"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+          </button>
+      </form>
+
+      <!-- Formulário de Cadastro -->
+
+      <form action="" class="input-group" id="cadastro" [ngClass]="classCadastro">
+          <input [(ngModel)]="user.nome" type="text" name="nome" id="nomeId" class="input-field" placeholder="Nome" required>
+
+          <input [(ngModel)]="user.email" type="email" onkeyup="validaEmail()" name="email" id="emailId" class="input-field" placeholder="e-mail" required>
+          <div id="txtEmail"></div>
+
+          <input [(ngModel)]="user.foto" type="text" name="foto" id="fotoId" class="input-field" placeholder="link da sua foto" required>
+
+          <input (input)="confirmSenha($event)" type="password" name="senha" id="senhaId" class="input-field" placeholder="senha" required>
+          <span class="icons"><i class="fas fa-eye"></i></span>
+
+          <input [(ngModel)]="user.senha" type="password" name="confimeSenha" id="confirmeSenhaId" class="input-field" placeholder="confirme sua senha" required>
+          
+        <!--
+          <div class="select-box">
+            <div class="options-container">
+                <div class="option">
+                    <input type="radio" class="radio" name="categoria" id="professor">
+                    <label for="automobiles">Professor</label>
+                </div>
+
+                <div class="option">
+                    <input type="radio" class="radio" name="categoria" id="aluno">
+                    <label for="automobiles">Aluno</label>
+                </div>
+            </div>
+
+            <div class="selected" (click)="selected()">
+                <p>selecione seu tipo de usuário</p>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+        -->
+        <div class="container">
+            <div class="select-container">
+              <select (change)="tipoUser($event)">
+                <option selected disabled>Selecione seu usuário</option>
+                <option class="option" value="prof">Professor</option>
+                <option class="option" value="aluno">Aluno</option>
+              </select>
+            </div>
+        </div>
+          <div class="buttons">
+              <button type="submit" class="submit-btn cancelar" routerLink="/login">Cancelar</button>
+
+              <button type="submit" class="btn-login cadastrar">
+                  <span class="text" (click)="cadastrar()">Cadastrar</span>
+                  <span class="round"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+              </button>
+          </div>
+      </form>
+  </div>
+</div>
